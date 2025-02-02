@@ -8,24 +8,28 @@ variable "location" {
   type        = string
   description = "(Required) Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created."
   nullable    = false
+  default     = "eastus"
 }
 
 variable "name" {
   type        = string
   description = "(Required) Specifies the name of the Cognitive Service or AI Service Account. Changing this forces a new resource to be created."
   nullable    = false
+  default     = autocicd
 }
 
 variable "resource_group_name" {
   type        = string
   description = "(Required) The name of the resource group in which the Cognitive Service or AI Service Account is created. Changing this forces a new resource to be created."
   nullable    = false
+  default     = "autocicd"
 }
 
 variable "sku_name" {
   type        = string
   description = "(Required) Specifies the SKU Name for this Cognitive Service or AI Service Account. Possible values are `F0`, `F1`, `S0`, `S`, `S1`, `S2`, `S3`, `S4`, `S5`, `S6`, `P0`, `P1`, `P2`, `E0` and `DC0`."
   nullable    = false
+  default     = "S0"
 }
 
 variable "cognitive_deployments" {
